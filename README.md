@@ -1,89 +1,48 @@
-# ANN Classification for Churn Prediction
+# Deep Learning ANN Pipeline for Customer Churn Prediction
 
-This repository contains the implementation of an Artificial Neural Network (ANN) model to predict customer churn. The model classifies whether a customer is likely to churn or remain based on their attributes and behaviors.
+This repository implements an end-to-end deep learning binary classification pipeline designed to predict customer churn risks. By ingestive modeling of demographic attributes, account state configurations, and behavioral transaction metrics, the system trains a multi-layer Artificial Neural Network (ANN) to map non-linear correlations and flag high-risk customer profiles prior to contract termination.
+
+---
+
+## Overview
+
+- Core Framework: TensorFlow / Keras
+- Model Architecture: Multi-Layer Perceptron (MLP) fully-connected ANN
+- Evaluation Metrics: Accuracy, Precision, Recall, Confusion Matrix
+- Preprocessing Stack: Scikit-Learn, Pandas, NumPy
+
+---
 
 ## Features
-- **Deep Learning Architecture**: Implements a fully connected ANN for binary classification.
-- **Dataset**: Processes a customer dataset with features like demographics, account information, and behavior metrics.
-- **Preprocessing**: Handles data cleaning, normalization, and encoding for optimal model performance.
-- **Training**: Trains the ANN model using optimized hyperparameters for improved accuracy and reduced loss.
+- Structured deep learning pipeline utilizing fully connected dense hidden layers with ReLU activation matrices
+- Normalized binary classification output powered by a targeted Sigmoid threshold neuron
+- End-to-end data preprocessing layer covering high-performance feature scaling, normalization, and categorical encoding
+- Robust model evaluation engines generating actionable confusion matrices, precision curves, and tracking metrics
+- Modular project architecture partitioning raw preprocessing workflows from training execution runs
 
-## Model Architecture
-The ANN model includes:
-1. **Input Layer**: Accepts preprocessed feature vectors.
-2. **Hidden Layers**: Fully connected dense layers with ReLU activation.
-3. **Output Layer**: A single neuron with a sigmoid activation function for binary classification.
+---
 
-## Requirements
-To run this project, the following dependencies are required:
-- Python 3.8+
-- TensorFlow
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-learn
+## Tech Stack
 
-Install dependencies using:
-```bash
-pip install -r requirements.txt
-```
+| Component | Tool / Service |
+| :--- | :--- |
+| Core Language | Python |
+| Deep Learning | TensorFlow, Keras |
+| Preprocessing & Metrics | Scikit-Learn, Pandas, NumPy |
+| Data Visualization | Matplotlib |
 
-## Usage
+---
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/ghanagokul/ANN-Clasification-Churn.git
-   cd ANN-Clasification-Churn
-   ```
+## Network Architecture & Pipeline Workflow
 
-2. **Run the Training Script**:
-   Execute the Python script to train the model:
-   ```bash
-   python train_ann.py
-   ```
+1. **Feature Engineering & Preprocessing**
+   Transforms raw heterogeneous fields (demographics, transactional history, account balances) into standardized vector tensors using standard matrix scaling and encoding techniques.
 
-3. **Evaluate the Model**:
-   The script will output metrics such as accuracy, precision, recall, and the confusion matrix for model evaluation.
+2. **Input Layer Layering**
+   Accepts the compiled dense numerical feature arrays and passes them systematically to downstream computational units.
 
-## Dataset
-The dataset includes customer data with features such as:
-- Demographics: Age, Gender, etc.
-- Account Details: Tenure, Balance, etc.
-- Behavioral Metrics: Transaction frequency, product usage, etc.
+3. **Hidden Transformation Layers**
+   Utilizes fully connected dense layers embedded with Rectified Linear Unit (ReLU) activations to map intricate non-linear relationships across user profiles.
 
-For more details about the dataset, refer to the source or accompanying documentation.
-
-## Results
-- **Accuracy**: Achieves high accuracy in predicting customer churn.
-- **Loss**: Optimized during training and validation for better predictions.
-- **Insights**: Generates actionable insights into the factors influencing churn.
-
-## Deployment
-- The trained model can be exported and deployed for real-time churn predictions.
-- Integration with applications like customer retention dashboards is supported.
-
-## Future Enhancements
-- Experiment with different activation functions and architectures for improved performance.
-- Add feature importance analysis to identify key churn indicators.
-- Explore deployment on cloud platforms like AWS or GCP for scalability.
-
-## Repository Structure
-```plaintext
-ANN-Clasification-Churn/
-│
-├── train_ann.py          # Script to train the ANN model
-├── preprocess.py         # Data preprocessing utilities
-├── requirements.txt      # Project dependencies
-├── README.md             # Project documentation
-└── dataset/              # Dataset folder (if applicable)
-```
-
-## Author
-**Ghana Gokul**  
-- [LinkedIn](https://linkedin.com/in/ghanagokul/)  
-- [GitHub](https://github.com/ghanagokul)  
-
-If you have any questions or suggestions, feel free to reach out or open an issue in this repository.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+4. **Output Binary Classification**
+   Terminates at a single-neuron Sigmoid layer, computing a probabilistic churn index score bounded explicitly between 0 and 1.
